@@ -368,7 +368,16 @@ export default function MandateDetails() {
             width: 80,
             opacity: !fileName ? 0.6 : 1,
           }}
-          onClick={() => setFileName(null)}
+          onClick={() => {
+            setFileName(null);
+            setResult(() => {
+              const randomNumber = Math.floor(Math.random() * 3) + 1;
+              console.log("asas", randomNumber);
+              if (randomNumber == 1) return "yes";
+              else if (randomNumber == 2) return "no";
+              else return "average";
+            });
+          }}
           disabled={!fileName}
         >
           Reset
