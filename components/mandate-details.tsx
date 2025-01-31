@@ -142,7 +142,7 @@ export default function MandateDetails() {
           style={{
             flexDirection: "row",
             display: "flex",
-            gap: 4,
+            gap: 40,
             flex: 1,
             width: "100%",
             marginBottom: 24,
@@ -385,7 +385,16 @@ export default function MandateDetails() {
       </Container>
       {!loading && fileName && (
         <Container>
-          <p style={{ paddingBottom: 20 }}>👁️ Overview</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <p style={{ paddingBottom: 20 }}>👁️ Overview</p>
+            <p style={{ color: "#6161FF" }}>Save as PDF</p>
+          </div>
           <hr />
           {/* <div
           style={{

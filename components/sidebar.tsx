@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const SidebarContainer = styled.aside`
   width: 240px;
@@ -6,22 +6,22 @@ const SidebarContainer = styled.aside`
   border-right: 1px solid #eaeaea;
   height: 100vh;
   padding: 20px;
-`
+`;
 
 const ProjectList = styled.div`
   margin-top: 20px;
-`
+`;
 
 const ProjectItem = styled.div`
   display: flex;
   align-items: center;
   padding: 8px 0;
   cursor: pointer;
-  
+
   &:hover {
     background: #f5f5f5;
   }
-`
+`;
 
 const StatusDot = styled.span<{ color: string }>`
   width: 8px;
@@ -29,7 +29,7 @@ const StatusDot = styled.span<{ color: string }>`
   border-radius: 50%;
   background: ${(props) => props.color};
   margin-left: auto;
-`
+`;
 
 const NewPrediction = styled.button`
   display: flex;
@@ -41,11 +41,11 @@ const NewPrediction = styled.button`
   cursor: pointer;
   font-size: 14px;
   color: #666;
-  
+
   &:hover {
     background: #f5f5f5;
   }
-`
+`;
 
 export default function Sidebar() {
   return (
@@ -53,7 +53,7 @@ export default function Sidebar() {
       <NewPrediction>+ New Prediction</NewPrediction>
 
       <ProjectList>
-        <h3>Recent Mandates</h3>
+        <h3 style={{ color: "#6B7785" }}>Recent Mandates</h3>
         <ProjectItem>
           Lodha Palava
           <StatusDot color="#ffd700" />
@@ -72,6 +72,5 @@ export default function Sidebar() {
         </ProjectItem>
       </ProjectList>
     </SidebarContainer>
-  )
+  );
 }
-
