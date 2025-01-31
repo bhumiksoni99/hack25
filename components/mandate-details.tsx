@@ -89,11 +89,16 @@ export default function MandateDetails() {
   };
 
   const LoadingOverlay = () => (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
       <div className="flex flex-col items-center">
-        <div className="animate-spin h-12 w-12 border-4 border-white border-t-transparent rounded-full"></div>
+        {/* <div className="animate-spin h-12 w-12 border-4 border-white border-t-transparent rounded-full"></div> */}
         {/* <p className="mt-4 text-white text-lg">Loading...</p> */}
-        <Image src="/loading.png" width={1000} height={1000} />
+        <Image
+          src="/loading.png"
+          width={1000}
+          height={1000}
+          className="bg-white p-10 rounded"
+        />
       </div>
     </div>
   );
@@ -106,8 +111,6 @@ export default function MandateDetails() {
       </div>
     );
   };
-
-  console.log("das", result);
 
   return (
     <div style={{ padding: "40px" }}>
